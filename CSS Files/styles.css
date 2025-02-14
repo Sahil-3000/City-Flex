@@ -3,17 +3,18 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    background:radial-gradient(circle,#5097a3,rgb(31, 31, 31));
 }
 
 header {
-    background-color: #333;
+    background:radial-gradient(circle,#5097a3,rgb(31, 31, 31));
     color: #fff;
     padding: 10px 0;
     text-align: center;
 }
 
 header .logo img {
-    width: 50px;
+    width: 450px;
     height: auto;
 }
 
@@ -30,6 +31,8 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-size:30px;
+    font-weight:bold;
 }
 
 section {
@@ -39,15 +42,15 @@ section {
 
 #home {
     background-color: #fff;
+    background:linear-gradient(to bottom,#512795,#F2EFE7);
 }
 
 #services {
     background-color: #e2e2e2;
+    background:linear-gradient(to bottom,#3B6790,#EFB036);
 }
 
-#portfolio {
-    background-color: #fff;
-}
+
 
 #contact {
     background-color: #e2e2e2;
@@ -62,16 +65,44 @@ section {
     margin: 10px 0;
 }
 
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+#portfolio {
+    background-color: #fff;
+    height: auto; /* Adjust height to auto */
+    margin-bottom: 20px; /* Increase margin-bottom */
+    padding-left:15px;
+    padding-right:15px;
+    background:linear-gradient(to bottom,#3B6790,#EFB036);
+    
 }
 
+#portfolio h2{
+    text-align:center;
+    font-size:30px;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+.gallery {
+    column-width:200px;
+   
+    
+    
+   
+}
+
+
 .gallery img, .gallery video {
-    margin: 10px;
-    width: 200px;
-    height: auto;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius:10px;                                                                                                                     
+    
+    /* height: auto; */
+}
+.contact{
+    margin-bottom: 20px; /* Increase margin-bottom */
+    height: auto; /* Adjust height to auto */
+    background-color: #555;
 }
 
 form {
