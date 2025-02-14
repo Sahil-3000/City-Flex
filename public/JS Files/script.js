@@ -6,14 +6,14 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     let message = document.getElementById("message").value;
 
     if (name && email && message) {
-        document.getElementById("formResponse").innerText = "Thank you, " + name + "! We'll get back to you soon.";
+        document.getElementById("formResponse").innerHTML = `<span class="success-message">Thank you, ${name}! We have received your message and will get back to you at ${email} soon.</span>`;
         
         // Send email
         sendContactEmail(name, email, message);
 
         this.reset();
     } else {
-        document.getElementById("formResponse").innerText = "Please fill out all fields.";
+        document.getElementById("formResponse").innerHTML = `<span class="error-message">Please fill out all fields.</span>`;
     }
 });
 
@@ -39,14 +39,14 @@ document.getElementById("bookingForm").addEventListener("submit", function(event
     let bookingDate = document.getElementById("bookingDate").value;
 
     if (bookingName && bookingEmail && bookingPhone && bookingDate) {
-        document.getElementById("bookingResponse").innerText = "Thank you, " + bookingName + "! Your session is booked for " + bookingDate + ".";
+        document.getElementById("bookingResponse").innerHTML = `<span class="success-message">Thank you, ${bookingName}! Your session is booked for ${bookingDate}. We will contact you at ${bookingPhone} or ${bookingEmail} if needed.</span>`;
         
         // Send email
         sendBookingEmail(bookingName, bookingEmail, bookingPhone, bookingDate);
 
         this.reset();
     } else {
-        document.getElementById("bookingResponse").innerText = "Please fill out all fields.";
+        document.getElementById("bookingResponse").innerHTML = `<span class="error-message">Please fill out all fields.</span>`;
     }
 });
 
@@ -89,9 +89,9 @@ document.getElementById("priceCalcForm").addEventListener("submit", function(eve
         }
 
         let totalPrice = area * pricePerSquareInch;
-        document.getElementById("priceResponse").innerText = "The estimated price is $" + totalPrice.toFixed(2);
+        document.getElementById("priceResponse").innerHTML = `<span class="success-message">The estimated price is $${totalPrice.toFixed(2)}</span>`;
         this.reset();
     } else {
-        document.getElementById("priceResponse").innerText = "Please fill out all fields.";
+        document.getElementById("priceResponse").innerHTML = `<span class="error-message">Please fill out all fields.</span>`;
     }
 });
