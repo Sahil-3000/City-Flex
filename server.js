@@ -10,11 +10,12 @@ const port = 3000;
 app.use(bodyParser.json());
 app.use(cors());
 
-// Serve static files from the "public" directory
+// Serve static files from 'public' folder
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Serve index.html from the root directory
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, 'index.html')); // Adjusted path
 });
 
 app.post('/send-booking-email', (req, res) => {

@@ -18,7 +18,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
 });
 
 function sendContactEmail(name, email, message) {
-    fetch('http://localhost:3000/send-contact-email', {
+    fetch('/send-contact-email', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -51,7 +51,7 @@ document.getElementById("bookingForm").addEventListener("submit", function(event
 });
 
 function sendBookingEmail(name, email, phone, date) {
-    fetch('http://localhost:3000/send-booking-email', {
+    fetch('/send-booking-email', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
