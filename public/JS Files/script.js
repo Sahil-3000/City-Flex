@@ -7,24 +7,42 @@ document.getElementById("contactForm").addEventListener("submit", function(event
 
     if (name && email && message) {
         document.getElementById("formResponse").innerText = "Thank you, " + name + "! We'll get back to you soon.";
+        
+        // Send email
+        sendContactEmail(name, email, message);
+
         this.reset();
     } else {
         document.getElementById("formResponse").innerText = "Please fill out all fields.";
     }
 });
 
+function sendContactEmail(name, email, message) {
+    fetch('http://localhost:3000/send-contact-email', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name, email, message })
+    })
+    .then(response => response.text())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+}
+
 document.getElementById("bookingForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
     let bookingName = document.getElementById("bookingName").value;
     let bookingEmail = document.getElementById("bookingEmail").value;
+    let bookingPhone = document.getElementById("bookingPhone").value;
     let bookingDate = document.getElementById("bookingDate").value;
 
-    if (bookingName && bookingEmail && bookingDate) {
+    if (bookingName && bookingEmail && bookingPhone && bookingDate) {
         document.getElementById("bookingResponse").innerText = "Thank you, " + bookingName + "! Your session is booked for " + bookingDate + ".";
         
         // Send email
-        sendBookingEmail(bookingName, bookingEmail, bookingDate);
+        sendBookingEmail(bookingName, bookingEmail, bookingPhone, bookingDate);
 
         this.reset();
     } else {
@@ -32,13 +50,13 @@ document.getElementById("bookingForm").addEventListener("submit", function(event
     }
 });
 
-function sendBookingEmail(name, email, date) {
+function sendBookingEmail(name, email, phone, date) {
     fetch('http://localhost:3000/send-booking-email', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ name, email, date })
+        body: JSON.stringify({ name, email, phone, date })
     })
     .then(response => response.text())
     .then(data => console.log(data))

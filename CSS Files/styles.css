@@ -3,47 +3,33 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    background:radial-gradient(circle,#5097a3,rgb(31, 31, 31));
 }
 
 header {
-    background:radial-gradient(circle,#5097a3,rgb(31, 31, 31));
+    background-color: #333;
     color: #fff;
     padding: 10px 0;
     text-align: center;
 }
 
 header .logo img {
-    width: 550px;
+    width: 50px;
     height: auto;
-   
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    width:auto;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 30px;
-    
-
+    margin: 0 10px;
 }
 
 nav ul li a {
-    
     color: #fff;
     text-decoration: none;
-    font-size:30px;
-    font-weight:bold;
-    background:linear-gradient(to bottom,gray,black);
-    border-radius:5px;
-    
-    padding:6px;
-    width:30px;
-    height:20px;
 }
 
 section {
@@ -53,220 +39,30 @@ section {
 
 #home {
     background-color: #fff;
-    background: linear-gradient(to bottom, #512795, #F2EFE7);
-    padding: 50px 20px;
-    color: #333;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
 }
 
-#home::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 1;
+#services {
+    background-color: #e2e2e2;
 }
 
-#home h2 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    position: relative;
-    z-index: 2;
-}
-
-#home p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #fff;
-    max-width: 800px;
-    margin: 0 auto;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-    position: relative;
-    z-index: 2;
-}
-
-.booking-session {
-    margin-top: 30px;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 2;
-}
-
-.booking-session h3 {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.booking-session form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.booking-session form input {
-    margin: 10px 0;
-    padding: 10px;
-    width: 80%;
-    max-width: 400px;
-}
-
-.booking-session form button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
-booking-session form button:hover {
-    background-color: #555;
-}
-
-#bookingResponse {
-    margin-top: 20px;
-    color: green;
-}
-
-.price-calculator {
-    margin-top: 30px;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 2;
-}
-
-.price-calculator h3 {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.price-calculator form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.price-calculator form input,
-.price-calculator form select {
-    margin: 10px 0;
-    padding: 10px;
-    width: 80%;
-    max-width: 400px;
-}
-
-.price-calculator form button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
-.price-calculator form button:hover {
-    background-color: #555;
-}
-
-#priceResponse {
-    margin-top: 20px;
-    color: green;
+#portfolio {
+    background-color: #fff;
+    height:500px;
+    margin-bottom:10px;
+    
 }
 
 #contact {
     background-color: #e2e2e2;
 }
 
-#services {
-    background-color: #e2e2e2;
-    background:linear-gradient(to bottom,#3B6790,#EFB036);
-}
-
-/* #services h2{
-    font-size:40px;
-    font-weight:bolder;
-} */
-
-#services h2 {
-    margin: 10px 0;
-    font-size: 30px;
-    font-weight: bold;
-    width: auto;
-    height: auto;
-    padding: 5px 10px;
-    color: white;
-    background: linear-gradient(to bottom, #111, #0ce3d5); /* Enhanced gradient */
-    border-radius: 8px;
-    box-shadow: 
-        3px 3px 5px rgba(0, 0, 0, 0.7),  /* Dark shadow for depth */
-        inset 2px 2px 4px rgba(255, 255, 255, 0.2), /* Inner light for 3D */
-        inset -2px -2px 4px rgba(0, 0, 0, 0.5); /* Inner dark shadow */
-    text-shadow: 
-        2px 2px 3px rgba(0, 0, 0, 0.7), /* Shadow behind text */
-        -1px -1px 2px rgba(255, 255, 255, 0.3); /* Highlight for depth */
-    transform: perspective(500px) rotateX(5deg); /* Slight tilt for a 3D feel */
-}
-
-
-.service-list{
-    display:flex;
-    justify-content:center;
-    gap:25px;
-}
 .service-list ul {
-    
     list-style: none;
     padding: 0;
-
 }
 
 .service-list ul li {
     margin: 10px 0;
-    font-size: 30px;
-    font-weight: bold;
-    width: auto;
-    height: auto;
-    padding: 5px 10px;
-    color: white;
-    background: linear-gradient(to bottom,#0ce3d5, black );
-    border-radius: 8px;
-    box-shadow: 4px 4px 10px #f6f8f8; /* Adds a soft shadow */
-}
-
-
-
-#portfolio {
-    background-color: #fff;
-    height: auto; /* Adjust height to auto */
-    margin-bottom: 20px; /* Increase margin-bottom */
-    padding-left:15px;
-    padding-right:15px;
-    background:linear-gradient(to bottom,#3B6790,#EFB036);
-    
-}
-
-#portfolio h2{
-    text-align:center;
-    font-size:30px;
-    font-weight:bold;
-    margin-top:15px;
 }
 
 .gallery {
@@ -282,13 +78,12 @@ booking-session form button:hover {
     margin-right: 10px;
     margin-bottom: 10px;
     width: 100%;
-    border-radius:10px;                                                                                                                     
     
     /* height: auto; */
 }
 .contact{
-    margin-bottom: 20px; /* Increase margin-bottom */
-    height: auto; /* Adjust height to auto */
+    margin-bottom:10px;
+    height:400px;
     background-color: #555;
 }
 
@@ -320,50 +115,4 @@ form button:hover {
 #formResponse {
     margin-top: 20px;
     color: green;
-}
-
-@media (max-width: 1200px) {
-    header .logo img {
-        width: 300px;
-    }
-    nav ul li a {
-        font-size: 24px;
-    }
-    #portfolio h2 {
-        font-size: 24px;
-    }
-}
-
-@media (max-width: 768px) {
-    header .logo img {
-        width: 200px;
-    }
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-    nav ul li a {
-        font-size: 20px;
-    }
-    .gallery {
-        column-width: 150px;
-    }
-    form input, form textarea {
-        width: 90%;
-    }
-}
-
-@media (max-width: 480px) {
-    header .logo img {
-        width: 150px;
-    }
-    nav ul li a {
-        font-size: 18px;
-    }
-    .gallery {
-        column-width: 100px;
-    }
-    form input, form textarea {
-        width: 100%;
-    }
 }

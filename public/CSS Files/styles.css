@@ -320,6 +320,7 @@ form button:hover {
 #formResponse {
     margin-top: 20px;
     color: green;
+    font-weight: bold;
 }
 
 @media (max-width: 1200px) {
